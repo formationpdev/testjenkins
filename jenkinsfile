@@ -1,0 +1,11 @@
+node {
+	stage('clone') {
+    		git 'https://github.com/priximmo/jenkins-helloworld'
+	}
+	stage('BUILD') {
+		sh 'javac Main.java'
+	}
+	stage('RUN') {
+	        sh 'java Main'
+	}
+}
